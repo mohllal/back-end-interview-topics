@@ -14,6 +14,7 @@ Feel free to contribute, it would be highly appreciated!
   - [Mircoservices](#microservices)
 - [Security](#security)
 - [Git](#git)
+- [Testing](#testing)
 
 ### <a name="languages">Programming Languages</a>
 
@@ -80,12 +81,16 @@ Feel free to contribute, it would be highly appreciated!
         new obj1.print();
         ```
 
+**[[⬆]](#toc) return to Table of Contents**
+
 ### <a name="languages">Object Oriented Programming (OOP)</a>
 
 - What are the pros and cons of functional programming vs object-oriented programming?
 - When is classical inheritance an appropriate choice?
 - When is prototypal inheritance an appropriate choice?
 - What does “favor object composition over class inheritance” mean?
+
+**[[⬆]](#toc) return to Table of Contents**
 
 ### <a name="networking">Networking</a>
 
@@ -138,5 +143,14 @@ Feel free to contribute, it would be highly appreciated!
 - What is "git stash"? And when to use it?
 - How to remove a file from git without removing it from the file system?
 - When to use "git rebase" instead of "git merge"?
+
+**[[⬆]](#toc) return to Table of Contents**
+
+### <a name="testing">Testing</a>
+
+- What is Test Driven Development (TDD)? And what is its process?
+- What is Data-Driven Development (DDD)? And what is its process?
+- What is Keyword Driven Development (KDD)? And what is its process?
+- What is Behavior Driven Development (BDD)? And what is its process?
 
 **[[⬆]](#toc) return to Table of Contents**
