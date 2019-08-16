@@ -20,72 +20,74 @@ Feel free to contribute, it would be highly appreciated!
 
 - <a name="javascript">JavaScript</a>:
 
-    - What are the programming paradigms supported by JavaScript?
-    - What is the difference between classical inheritance and prototypal inheritance?
-    - What is asynchronous programming, and why is it important in JavaScript?
-    - What is the difference between between global scope, and local scope (function scope, and block scope)?
-    - What is hoisting, and IIFE?
-    - What is closures? How to emulate encapsulating using it?
-    - What is the different between ```.__proto__``` and ```.prototype```?
-    - How to change the context of functions using ```.call()```, ```.apply()```, or ```.bind()```?
-    - What happens when we call a function with the ```new``` keyword?
-    - Consider the following code:
+  - What are the programming paradigms supported by JavaScript?
+  - What is the difference between classical inheritance and prototypal inheritance?
+  - What is asynchronous programming, and why is it important in JavaScript?
+  - What is the difference between between global scope, and local scope (function scope, and block scope)?
+  - What is hoisting, and IIFE?
+  - What is closures? How to emulate encapsulating using it?
+  - What are the different patterns of function invocation in JavaScript? And what is the value of `this` in each one them?
+  - What is the different between `.__proto__` and `.prototype`?
+  - How to change the context of functions using `.call()`, `.apply()`, or `.bind()`?
+  - What happens when we call a function with the `new` keyword?
+  - Consider the following code:
 
-        ```javascript
-        (function() {
-            var a = b = 5;
-        })();
-        console.log(b);
-        ```
+    ```javascript
+    (function() {
+        var a = b = 5;
+    })();
+    console.log(b);
+    ```
 
-        What will be printed on the console? If the *strict mode* was enabled using ```'use strict';```, what will be the output?
+    What will be printed on the console? If the *strict mode* was enabled using `'use strict';`, what will be the output?
 
-    - Define a repeatify function on the String object. The function accepts an integer that specifies how many times the string has to be repeated. The function returns the string repeated the number of times specified. For example:
+  - Define a `repeatify` function on the String object. The function accepts an integer that specifies how many times the string has to be repeated. The function returns the string repeated the number of times specified. For example:
 
-        ```javascript
-        console.log('hello'.repeatify(3));
-        ```
+    ```javascript
+    console.log('hello'.repeatify(3));
+    ```
 
-        It should print hellohellohello.
+    It should print hellohellohello.
 
-    - What is the result of the following code snippets?
+  - What is the result of the following code snippets?
 
-        ```javascript
-        var fullname = 'John Doe';
-        var obj = {
-            fullname: 'Colin Ihrig',
-            prop: {
-                fullname: 'Aurelio De Rosa',
-                getFullname: function() {
-                    return this.fullname;
-                }
+    ```javascript
+    var fullname = 'John Doe';
+    var obj = {
+        fullname: 'Colin Ihrig',
+        prop: {
+            fullname: 'Aurelio De Rosa',
+            getFullname: function() {
+                return this.fullname;
             }
-        };
-        console.log(obj.prop.getFullname());
+        }
+    };
+    console.log(obj.prop.getFullname());
 
-        var test = obj.prop.getFullname;
-        console.log(test());
-        ```
+    var test = obj.prop.getFullname;
+    console.log(test());
+    ```
 
-        ```javascript
-        const obj1 = {
-            value: 'hi',
-            print: function() {
-                console.log(this);
-            },
-        };
+    ```javascript
+    const obj1 = {
+        value: 'hi',
+        print: function() {
+            console.log(this);
+        },
+    };
 
-        const obj2 = { value: 17 };
+    const obj2 = { value: 17 };
 
-        obj1.print.call(obj2);
-        new obj1.print();
-        ```
+    obj1.print.call(obj2);
+    new obj1.print();
+    ```
 
 **[[⬆]](#toc) return to Table of Contents**
 
 ### <a name="languages">Object Oriented Programming (OOP)</a>
 
 - What are the pros and cons of functional programming vs object-oriented programming?
+- What are the four pillars of OOP? *(A brief description for each one)*
 - When is classical inheritance an appropriate choice?
 - When is prototypal inheritance an appropriate choice?
 - What does “favor object composition over class inheritance” mean?
@@ -112,12 +114,12 @@ Feel free to contribute, it would be highly appreciated!
 
 - <a name="microservices">Microservices Architecture</a>:
 
-    - What is the Microservices architecture?
-    - What are the pros and cons of the Microservices architecture?
-    - What are the differences between Monolithic, SOA and Microservices?
-    - What is the API Gateway pattern?
-    - What are the decomposition patterns used in Mircroservices?
-    - What are the deployment strategies used in Mircoservices?
+  - What is the Microservices architecture?
+  - What are the pros and cons of the Microservices architecture?
+  - What are the differences between Monolithic, SOA and Microservices?
+  - What is the API Gateway pattern?
+  - What are the decomposition patterns used in Mircroservices?
+  - What are the deployment strategies used in Mircoservices?
 
 **[[⬆]](#toc) return to Table of Contents**
 
