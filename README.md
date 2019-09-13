@@ -88,9 +88,19 @@ Feel free to contribute, it would be highly appreciated!
 
 - What are the pros and cons of functional programming vs object-oriented programming?
 - What are the four pillars of OOP? *(A brief description for each one)*
+- What is dynamic or run time polymorphism?
+- What is static/early binding and dynamic/late binding?
 - When is classical inheritance an appropriate choice?
 - When is prototypal inheritance an appropriate choice?
-- What does “favor object composition over class inheritance” mean?
+- What does “favor object composition over class inheritance” mean? When should we choose inheritance over composition?
+- When it is more appropriate to use a structure (struct) instead of a class?
+- What are abstract classes? What are the distinct characteristics of an abstract class?
+- How is method overriding different from method overloading?
+- What is the difference between cohesion and coupling?
+- Why should we strive for *"high cohesion, and low coupling"* in designing a system?
+- Explain the concept of destructor/deinitializer?
+- What is LSP (Liskov Substitution Principle) and what are some examples of its use?
+- What is the difference between association, aggregation and composition?
 
 **[[⬆]](#toc) return to Table of Contents**
 
