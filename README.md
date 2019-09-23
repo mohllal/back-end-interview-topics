@@ -15,6 +15,7 @@ Feel free to contribute, it would be highly appreciated!
 - [Security](#security)
 - [Git](#git)
 - [Testing](#testing)
+- [Data Structures and Algorithms](#dataStructure-algorithm)
 
 ### <a name="languages">Programming Languages</a>
 
@@ -164,5 +165,29 @@ Feel free to contribute, it would be highly appreciated!
 - What is Data-Driven Development (DDD)? And what is its process?
 - What is Keyword Driven Development (KDD)? And what is its process?
 - What is Behavior Driven Development (BDD)? And what is its process?
+
+**[[⬆]](#toc) return to Table of Contents**
+
+### <a name="dataStructure-algorithm">Data Structures and Algorithms</a>
+
+- What is the difference between static array and dynamic array?
+- Compare the time complexity and space complexity of searching, insertion, and deletion for the following data structures:
+  - Dynamic Array
+  - Linked List
+  - Hash Table (Hash Map)
+  - Binary Search Tree (BST)
+  - Heap (Max Heap/Min Heap)
+  - Red-Black Tree
+  - AVL Tree
+- Compare the time complexity and space complexity for the following sorting algorithms:
+  - Bubble Sort
+  - Insertion Sort
+  - Selection Sort
+  - Merge Sort
+  - Heap Sort
+  - Quick Sort
+  - Counting Sort
+- What is the difference between inorder, preorder, and postorder tree traversal algorithms?
+- What is the difference between breadth-first-search (BFS) and depth-first-search (DFS)?
 
 **[[⬆]](#toc) return to Table of Contents**
