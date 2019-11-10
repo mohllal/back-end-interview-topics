@@ -17,6 +17,7 @@ Feel free to contribute, it would be highly appreciated!
 - [Git](#git)
 - [Testing](#testing)
 - [Data Structures and Algorithms](#dataStructure-algorithm)
+- [Scrum](#scrum)
 
 ### <a name="languages">Programming Languages</a>
 
@@ -196,5 +197,24 @@ Feel free to contribute, it would be highly appreciated!
   - ***Counting Sort***
 - What is the difference between ***inorder***, ***preorder***, and ***postorder*** tree traversal algorithms?
 - What is the difference between ***breadth-first-search (BFS)*** and ***depth-first-search (DFS)***?
+
+**[[⬆]](#toc) return to Table of Contents**
+
+### <a name="scrum">Scrum</a>
+
+- What is the *Agile Software Development* standing for? And why we should use it!
+- What is the difference between the ***Agile*** and ***Waterfall*** software development models?
+- What is the *four main principles* of the Agile Software Development? (***Agile Manifesto***)
+- How does *Agile* work?
+- List some Agile software development (or system development) ***methodologies***?
+- What is the difference between ***Kanban*** and ***Scrum*** *Agile* frameworks?
+- What is the duration of a *Scrum sprint*?
+- What is the ***Scrum of Scrums***?
+- What is the term ***increment*** standing for, in Scrum context?
+- Explain the ***scrum poker***/***planning poker*** technique?
+- What is the ***Release candidate***?
+- What is a ***story point*** in the Scrum?
+- What are the *main roles* in the Scrum?
+- What are the ***Sprint Planning*** meeting, ***Stand-up*** meeting, ***Definition of Done (DoD)*** meeting, and ***Sprint Retrospective*** meeting?
 
 **[[⬆]](#toc) return to Table of Contents**
