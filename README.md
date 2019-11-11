@@ -13,6 +13,7 @@ Feel free to contribute, it would be highly appreciated!
 - [Networking](#networking)
 - [Architectures and Design Patterns](#architecture):
   - [Mircoservices](#microservices)
+- [SQL](#sql)
 - [Security](#security)
 - [Git](#git)
 - [Testing](#testing)
@@ -22,38 +23,48 @@ Feel free to contribute, it would be highly appreciated!
 ### <a name="languages">Programming Languages</a>
 
 - <a name="javascript">JavaScript</a>:
-
+  
   - What are the *programming paradigms* supported by JavaScript?
+  
   - What is the difference between ***classical inheritance*** and ***prototypal inheritance***?
+  
   - What is ***asynchronous programming***, and why is it important in JavaScript?
+  
   - What is the difference between between ***global scope***, and ***local scope*** (function scope, and block scope)?
+  
   - What is ***hoisting***, and ***IIFE***?
+  
   - What is ***closures***? How to emulate ***encapsulating*** using it?
+  
   - What are the different *patterns of function invocation* in JavaScript? And what is the value of `this` in each one them?
+  
   - What is the different between `.__proto__` and `.prototype`?
+  
   - How to change the context of functions using `.call()`, `.apply()`, or `.bind()`?
+  
   - What happens when we call a function with the `new` keyword?
+  
   - Consider the following code:
-
+    
     ```javascript
     (function() {
         var a = b = 5;
     })();
     console.log(b);
     ```
-
+    
     What will be printed on the console? If the *strict mode* was enabled using `'use strict';`, what will be the output?
-
+  
   - Define a `repeatify` function on the String object. The function accepts an integer that specifies how many times the string has to be repeated. The function returns the string repeated the number of times specified. For example:
-
+    
     ```javascript
     console.log('hello'.repeatify(3));
     ```
-
+    
     It should print hellohellohello.
-
+  
   - What is the result of the following code snippets?
-
+    
     ```javascript
     var fullname = 'John Doe';
     var obj = {
@@ -66,11 +77,11 @@ Feel free to contribute, it would be highly appreciated!
         }
     };
     console.log(obj.prop.getFullname());
-
+    
     var test = obj.prop.getFullname;
     console.log(test());
     ```
-
+    
     ```javascript
     const obj1 = {
         value: 'hi',
@@ -78,9 +89,9 @@ Feel free to contribute, it would be highly appreciated!
             console.log(this);
         },
     };
-
+    
     const obj2 = { value: 17 };
-
+    
     obj1.print.call(obj2);
     new obj1.print();
     ```
@@ -133,12 +144,71 @@ Feel free to contribute, it would be highly appreciated!
 ### <a name="architecture">Architectures and Design Patterns</a>
 
 - <a name="microservices">Microservices Architecture</a>:
-
+  
   - What is the ***Microservices*** architecture? And what are its pros and cons?
   - What are the differences between ***Monolithic***, ***SOA*** and ***Microservices***?
   - What is the ***API Gateway*** pattern?
   - What are the ***decomposition patterns*** used in Mircroservices?
   - What are the ***deployment strategies*** used in Mircoservices?
+
+**[[⬆]](#toc) return to Table of Contents**
+
+### <a name="sql">SQL</a>
+
+- Suppose we have two tables `tbl1` and `tbl2`; Each of these tables contains one column on which join condition has been defined. The table `tbl1` contains the column `col1` and the table `tbl2` contains the column `col2`.
+  
+  - What will the outcome of the following ***inner*** join query?
+  
+  ```SQL
+  SELECT a.col1, b.col2
+  FROM tbl1 a INNER JOIN tbl2 b
+  ON a.col1 = b.col2
+  ```
+  
+  - What will the outcome of the following ***left outer*** join query?
+  
+  ```SQL
+  SELECT a.col1, b.col2
+  FROM tbl1 a LEFT OUTER JOIN tbl2 b
+  ON a.col1 = b.col2
+  ```
+  
+  - What will the outcome of the following ***right outer*** join query?
+  
+  ```SQL
+  SELECT a.col1, b.col2
+  FROM tbl1 a RIGHT OUTER JOIN tbl2 b
+  ON a.col1 = b.col2
+  ```
+  
+  - What will the outcome of the following ***full outer*** join query?
+  
+  ```SQL
+  SELECT a.col1, b.col2
+  FROM tbl1 a FULL OUTER JOIN tbl2 b
+  ON a.col1 = b.col2
+  ```
+
+    In case of:
+        - Join columns having ***unique*** values.
+        - Join columns having ***duplicate*** values.
+        - *One* Join table contains ***Null*** value.
+        - *Both* tables containing ***Null*** values.
+
+- Consider the following `staffs` table:
+  
+  | id  | first_name | last_name | manager_id |
+  | --- | ---------- | --------- | ---------- |
+  | 1   | Genna      | Jakson    | NULL       |
+  | 2   | Adam       | Ahmed     | 1          |
+  | 3   | Kali       | Boyer     | 2          |
+  | 4   | Layla      | David     | 2          |
+  | 5   | Ali        | Mohamed   | 3          |
+  
+  The `staffs` table stores the staff information such as `id`, `first_name`, and `last_name`. It also has a column named `manager_id` that specifies the direct manager.
+
+  Use ***self join*** and ***recursive common table expression (CTE)*** to get who reports to whom? And to get the primary manager (who doesn't report to anyone)?
+- Describe and give an example of the ***cross join***?
 
 **[[⬆]](#toc) return to Table of Contents**
 
