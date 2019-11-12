@@ -45,26 +45,26 @@ Feel free to contribute, it would be highly appreciated!
   - What happens when we call a function with the `new` keyword?
   
   - Consider the following code:
-    
+
     ```javascript
     (function() {
         var a = b = 5;
     })();
     console.log(b);
     ```
-    
+
     What will be printed on the console? If the *strict mode* was enabled using `'use strict';`, what will be the output?
   
   - Define a `repeatify` function on the String object. The function accepts an integer that specifies how many times the string has to be repeated. The function returns the string repeated the number of times specified. For example:
-    
+
     ```javascript
     console.log('hello'.repeatify(3));
     ```
-    
+
     It should print hellohellohello.
   
   - What is the result of the following code snippets?
-    
+
     ```javascript
     var fullname = 'John Doe';
     var obj = {
@@ -77,11 +77,11 @@ Feel free to contribute, it would be highly appreciated!
         }
     };
     console.log(obj.prop.getFullname());
-    
+
     var test = obj.prop.getFullname;
     console.log(test());
     ```
-    
+
     ```javascript
     const obj1 = {
         value: 'hi',
@@ -89,9 +89,9 @@ Feel free to contribute, it would be highly appreciated!
             console.log(this);
         },
     };
-    
+
     const obj2 = { value: 17 };
-    
+
     obj1.print.call(obj2);
     new obj1.print();
     ```
@@ -101,7 +101,39 @@ Feel free to contribute, it would be highly appreciated!
 ### <a name="nodejs">Node.js</a>
 
 - Is everything that’s asynchronous in Node.js handled by the `libuv`'s Thread Pool?
+
 - What are the ***phases of the Event Loop***?
+
+- What is ***callback hell*** and how can it be avoided?
+
+- What are the ***Timers*** functions of Node.js?
+
+- Explain what is ***Reactor Pattern*** in Node.js?
+
+- What is the difference between `process.nextTick()` `setTimeout()`, and `setImmediate()`?
+
+- Rewrite the code sample without ***try/catch*** block:
+  
+  ```javascript
+  async function check(req, res) {
+    try {
+        const a = await someOtherFunction();
+        const b = await somethingElseFunction();
+        res.send("result")
+    } catch (error) {
+        res.send(error.stack);
+    }
+  }
+  ```
+
+- What is ***Globals*** in Node.js? (explain *global*, *process*, and *buffer*)
+- What is the use of ***Underscore (`_`)*** in Node.js?
+- What are ***Error First Callbacks*** in Node.js?
+- How to ***gracefully shutdown/kill*** Node.js process? (explain `process.kill()`)
+- What is the difference between `readFile()` vs `createReadStream()`?
+- What is the `EventEmitter` in Node.js?
+- How many types of ***Streams*** are present in Node.js?
+- How to solve ***Process out of Memory Exception*** in Node.js ?
 
 **[[⬆]](#toc) return to Table of Contents**
 
@@ -206,8 +238,9 @@ Feel free to contribute, it would be highly appreciated!
   | 5   | Ali        | Mohamed   | 3          |
   
   The `staffs` table stores the staff information such as `id`, `first_name`, and `last_name`. It also has a column named `manager_id` that specifies the direct manager.
+  
+  Use ***self join*** and ***recursive common table expression (CTE)*** to get who reports to whom?
 
-  Use ***self join*** and ***recursive common table expression (CTE)*** to get who reports to whom? And to get the primary manager (who doesn't report to anyone)?
 - Describe and give an example of the ***cross join***?
 
 **[[⬆]](#toc) return to Table of Contents**
