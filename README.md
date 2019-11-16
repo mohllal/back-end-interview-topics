@@ -12,7 +12,7 @@ Feel free to contribute, it would be highly appreciated!
 - [Object Oriented Programming (OOP)](#oop)
 - [Networking](#networking)
 - [Architectures and Design Patterns](#architecture):
-  - [Mircoservices](#microservices)
+  - [Microservices](#microservices)
 - [SQL](#sql)
 - [Security](#security)
 - [Git](#git)
@@ -180,8 +180,16 @@ Feel free to contribute, it would be highly appreciated!
   - What is the ***Microservices*** architecture? And what are its pros and cons?
   - What are the differences between ***Monolithic***, ***SOA*** and ***Microservices***?
   - What is the ***API Gateway*** pattern?
-  - What are the ***decomposition patterns*** used in Mircroservices?
-  - What are the ***deployment strategies*** used in Mircoservices?
+  - What are the ***decomposition patterns*** used in Microservices? (briefly describe decomposition by ***business capability***, decomposition by ***subdomain***, and ***self-contained*** services)
+  - What are the ***deployment strategies*** used in Microservices?
+  - What are the *challenges* faced while working with Microservices?
+  - What is ***Domain Driven Design (DDD)***?
+  - What is ***Ubiquitous Language (UL)*** and what is its uses in DDD?
+  - What is the ***Distributed Transaction*** pattern?
+  - What is the ***Bounded Context*** pattern?
+  - What do you understand by ***Contract Testing***?
+  - What is ***End to End Testing*** in Microservices?
+  - What are ***Reactive Extensions*** in Microservices?
 
 **[[⬆]](#toc) return to Table of Contents**
 
@@ -276,6 +284,8 @@ Feel free to contribute, it would be highly appreciated!
 - What is ***Data-Driven Development*** (DDD)? And what is its process?
 - What is ***Keyword Driven Development*** (KDD)? And what is its process?
 - What is ***Behavior Driven Development*** (BDD)? And what is its process?
+- What is the difference between ***Mock*** or ***Stub***?
+- What do you know about ***Mike Cohn’s Test Pyramid***?
 
 **[[⬆]](#toc) return to Table of Contents**
 
