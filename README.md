@@ -14,6 +14,7 @@ Feel free to contribute, it would be highly appreciated!
 - [Architectures and Design Patterns](#architecture):
   - [Microservices](#microservices)
 - [SQL](#sql)
+- [Docker](#docker)
 - [Security](#security)
 - [Git](#git)
 - [Testing](#testing)
@@ -250,6 +251,33 @@ Feel free to contribute, it would be highly appreciated!
   Use ***self join*** and ***recursive common table expression (CTE)*** to get who reports to whom?
 
 - Describe and give an example of the ***cross join***?
+
+**[[⬆]](#toc) return to Table of Contents**
+
+### <a name="docker">Docker</a>
+
+- What is the difference between ***Docker*** and ***VM*** (Virtual Machine)?
+- What is Docker?
+- What is the advantage of ***Docker*** over ***Hypervisors***? (briefly describe What is the main difference between the approaches of *Docker* and *standard hypervisor* virtualization?)
+- What is Docker ***Image*** and ***Container***?
+- What is the default Docker ***network driver***, and how can you change it when running a Docker image?
+- What are the *four* different ***restart policies*** in Docker?
+- What is ***Docker Compose***? What can it be used for?
+- What is ***Docker Hub*** and what is the other type of ***Docker Image Registry***?
+- What are the possible ways of using *insecure* Docker image registries? What are the possible ways of using insecure Docker image registries?
+- What is ***Docker Swarm***? What can it be used for?
+- What is ***Dockerfile***? What can it be used for?
+- Is there any *data loss* when the Docker *container exits*?
+- Why `docker-compose down` may take `10` seconds to recreate or stop? (briefly describe `SIGTERM` and `SIGKILL`)
+- What’s the difference between `docker-compose up`, `docker-compose run`, and `docker-compose start`?
+- What’s the benefit of ***Dockerizing***?
+- Is there a possibility to include specific code with `COPY`/`ADD` or a volume?
+- What are the differences between the `docker run` and the `docker create`?
+- What are the *various states* that a Docker container can be in at any given point in time?
+- What is the preferred way of removing containers - `docker rm -f` or `docker stop` then followed by a `docker rm`?
+- What does the volume parameter `-v` do in a `docker run` command?
+- What is the use of the `docker save` and `docker load` commands?
+- Is there any problem with just using the `latest` tag in a container orchestration environment? What is considered best practice for ***image tagging***?
 
 **[[⬆]](#toc) return to Table of Contents**
 
