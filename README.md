@@ -135,15 +135,42 @@ Feel free to contribute, it would be highly appreciated!
 
 ### <a name="nodejs">Node.js</a>
 
-- Is everything that’s asynchronous in Node.js handled by the `libuv`'s Thread Pool?
+- Is everything that’s asynchronous in Node.js handled by the `libuv`'s Worker Pool?
+  - [Don't Block the Event Loop (or the Worker Pool)](https://nodejs.org/en/docs/guides/dont-block-the-event-loop/)
 
 - What are the ***phases of the Event Loop***?
+  - [Node.js event loop architecture](https://medium.com/preezma/node-js-event-loop-architecture-go-deeper-node-core-c96b4cec7aa4)
+
+- What do you know about ***Worker Threads*** module in Node.js?
+  - [Worker Threads](https://nodejs.org/api/worker_threads.html)
+
+- What is the difference between `process.nextTick()`, `setTimeout()`, `setInterval()`, and `setImmediate()`?
+  - [The Node.js Event Loop, Timers, and `process.nextTick()`](https://nodejs.org/en/docs/guides/event-loop-timers-and-nexttick/)
 
 - What are the ***Timers*** functions of Node.js?
+  - [Timers in Node.js](https://nodejs.org/en/docs/guides/timers-in-node/)
+
+- What can be done if a ***Timeout*** or ***Immediate*** object needs to be *cancelled*?
+
+- What will printed by running the following code:
+
+  ```javascript
+  const fs = require('fs');
+
+  fs.readFile(__filename, () => {
+    setTimeout(() => {
+        console.log('timeout');
+    }, 0);
+    setImmediate(() => {
+        console.log('immediate');
+    });
+    process.nextTick(() => {
+        console.log('nextTick');
+    });
+  });
+  ```
 
 - Explain what is ***Reactor Pattern*** in Node.js?
-
-- What is the difference between `process.nextTick()` `setTimeout()`, and `setImmediate()`?
 
 - Rewrite the code sample without ***try/catch*** block:
   
@@ -160,8 +187,10 @@ Feel free to contribute, it would be highly appreciated!
   ```
 
 - What is ***Globals*** in Node.js? (explain *global*, *process*, and *buffer*)
+  - [Global Objects](https://nodejs.org/api/globals.html)
 
 - What is the use of ***Underscore (`_`)*** in Node.js?
+  - [Use of Underscore (_) in Node.js](https://www.codingdefined.com/2014/06/use-of-underscore-in-nodejs.html)
 
 - What are ***Error First Callbacks*** in Node.js?
 
@@ -170,10 +199,47 @@ Feel free to contribute, it would be highly appreciated!
 - What is the difference between `readFile()` vs `createReadStream()`?
 
 - What is the `EventEmitter` in Node.js?
+  - [Node.js event emitter explained](https://medium.com/technoetics/node-js-event-emitter-explained-d4f7fd141a1a)
 
 - How many types of ***Streams*** are present in Node.js?
 
-- How to solve ***Process out of Memory Exception*** in Node.js ?
+- How to solve ***Process out of Memory Exception*** in Node.js?
+  
+- What is the use of ***DNS*** module in Node.js?
+
+- What's wrong with the following code snippet? *(explain [timing attacks](https://en.wikipedia.org/wiki/Timing_attack))*
+
+  ```javascript
+  function checkApiKey (apiKeyFromDb, apiKeyReceived) {
+    if (apiKeyFromDb === apiKeyReceived) {
+        return true
+    }
+    return false
+  }
+  ```
+
+- How does Node.js support *multi-processor* platforms, and does it fully utilize all processor resources? (explain ***Cluster*** module)
+
+- Consider the following code snippet:
+  
+  ```javascript
+  {
+    console.time("loop");
+    for (var i = 0; i < 1000000; i += 1){
+        // Do nothing
+    }
+    console.timeEnd("loop");
+  }
+  ```
+
+***Resources***:
+
+- [7 Hardest Node.js Interview Questions](https://dev.to/fullstackcafe/7-hardest-nodejs-interview-questions--answers-3lje)
+- [Top 20 Interview Questions on Node.js](https://www.codingdefined.com/2017/04/top-20-interview-questions-on-nodejs.html)
+- [Frequently asked: Node JS Interview Questions and Answers](https://medium.com/@vigowebs/frequently-asked-node-js-interview-questions-and-answers-b74fa1f20678)
+- [8 Essential Node.js Interview Questions](https://www.toptal.com/nodejs/interview-questions)
+- [Node.js Interview Questions and Answers](https://blog.risingstack.com/node-js-interview-questions-and-answers-2017/)
+- [Express and Node JS Interview Questions](https://www.onlineinterviewquestions.com/node-js-interview-questions/)
 
 **[[⬆]](#toc) return to Table of Contents**
 
