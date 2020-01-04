@@ -37,7 +37,7 @@ Feel free to contribute, it would be highly appreciated!
   
   - What is the difference between between ***global scope***, and ***local scope*** (function scope, and block scope)?
     - [Scope: Local, Global and Lexical](https://medium.com/altcampus/scope-local-global-and-lexical-e164f53450b3)
-    - [Scopes in Javascript](https://towardsdatascience.com/still-confused-in-js-scopes-f7dae62c16ee)
+    - [Scopes in JavaScript](https://towardsdatascience.com/still-confused-in-js-scopes-f7dae62c16ee)
 
   - What is ***hoisting***, and ***IIFE***?
     - [Understanding Hoisting in JavaScript](https://scotch.io/tutorials/understanding-hoisting-in-javascript)
@@ -54,7 +54,7 @@ Feel free to contribute, it would be highly appreciated!
     - [What is the difference between `prototype` and `__proto__` in JavaScript?](https://medium.com/javascript-in-plain-english/proto-vs-prototype-in-js-140b9b9c8cd5)
   
   - How to change the context of functions using `.call()`, `.apply()`, or `.bind()`?
-    - [How-to: call() , apply() and bind() in JavaScript](https://www.codementor.io/@niladrisekhardutta/how-to-call-apply-and-bind-in-javascript-8i1jca6jp)
+    - [How-to: `call()` , `apply()` and `bind()` in JavaScript](https://www.codementor.io/@niladrisekhardutta/how-to-call-apply-and-bind-in-javascript-8i1jca6jp)
   
   - What do `Object.assign()` and `Object.create()` do?
   
