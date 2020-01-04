@@ -9,10 +9,12 @@ Feel free to contribute, it would be highly appreciated!
 - [Back-End Interview Topics](#back-end-interview-topics)
   - [Table of Contents](#table-of-contents)
     - [Programming Languages](#programming-languages)
+      - [JavaScript](#javascript)
     - [Node.js](#nodejs)
     - [Object Oriented Programming (OOP)](#object-oriented-programming-oop)
     - [Networking](#networking)
-    - [Architectures and Design Patterns](#architectures-and-design-patterns)
+    - [Architectures and Design Patterns](#architecture)
+      - [Microservices Architecture](#microservices)
     - [SQL](#sql)
     - [Docker](#docker)
     - [Security](#security)
@@ -21,7 +23,7 @@ Feel free to contribute, it would be highly appreciated!
     - [Data Structures and Algorithms](#data-structures-and-algorithms)
     - [Scrum](#scrum)
 
-### <a name="languages">Programming Languages</a>
+### <a name="programming-languages">Programming Languages</a>
 
 - <a name="javascript">JavaScript</a>:
   
@@ -445,11 +447,35 @@ Feel free to contribute, it would be highly appreciated!
 ### <a name="testing">Testing</a>
 
 - What is ***Test Driven Development*** (TDD)? And what is its process?
+
 - What is ***Data-Driven Development*** (DDD)? And what is its process?
+
 - What is ***Keyword Driven Development*** (KDD)? And what is its process?
+
 - What is ***Behavior Driven Development*** (BDD)? And what is its process?
-- What is the difference between ***Mock*** or ***Stub***?
+
+- What is the difference between ***Fake***, ***Mock***, and ***Stub***?
+  - [Mocks Aren't Stubs](https://www.martinfowler.com/articles/mocksArentStubs.html)
+  - [The difference between faking, mocking, and stubbing?](https://stackoverflow.com/questions/346372/whats-the-difference-between-faking-mocking-and-stubbing)
+
+- What are the various *types of Unit Testing*?
+  - [State vs Interaction Based Testing](http://www.natpryce.com/articles/000342.html)
+
 - What do you know about ***Mike Cohn’s Test Pyramid***?
+  
+- What is ***Code Coverage***? And what are its various techniques?
+  - [What is code coverage?](https://stackoverflow.com/questions/195008/what-is-code-coverage-and-how-do-you-measure-it)
+  - [Pitfalls of code coverage](https://stackoverflow.com/questions/695811/pitfalls-of-code-coverage/695888)
+
+- How is *Unit Testing* different from *Integration Testing*?
+  - [Difference between Unit Testing and Integration Testing?](https://www.softwaretestingclass.com/what-is-difference-between-unit-testing-and-integration-testing/)
+
+***Resources***:
+
+- [Unit Testing Interview Questions and Answers](https://www.janbasktraining.com/blog/unit-testing-interview-questions/)
+- [The 100% Code Coverage Myth](https://hackernoon.com/the-100-code-coverage-myth-900b83d20d3d)
+- [Code Coverage: The Metric That Makes Your Tests Worse](https://medium.com/@AikoPath/code-coverage-the-metric-that-makes-your-tests-worse-c1dddcc0831)
+- [5 Questions Every Unit Test Must Answer](https://medium.com/javascript-scene/what-every-unit-test-needs-f6cd34d9836d)
 
 **[[⬆]](#toc) return to Table of Contents**
 
