@@ -332,16 +332,47 @@ Feel free to contribute, it would be highly appreciated!
 ### <a name="git">Git</a>
 
 - What is Git? And what it is used for?
+
 - What are the pros and cons of distributed version control systems like ***Git*** over centralized ones like ***SVN***?
+  - [Why is Git better than Subversion?](https://stackoverflow.com/questions/871/why-is-git-better-than-subversion)
+  - [Should I use SVN or Git?](https://stackoverflow.com/questions/161541/should-i-use-svn-or-git/161572)
+
 - What is Git fork? What is difference between ***fork***, ***branch*** and ***clone***?
-- What is the difference between ***"git pull"*** and ***"git fetch"***?
+  - [What are the differences between git branch, fork, fetch, merge, rebase and clone?](https://stackoverflow.com/questions/3329943/what-are-the-differences-between-git-branch-fork-fetch-merge-rebase-and-clon)
+
+- What is the difference between `git pull` and `git fetch`?
+
 - How to *revert previous commit* in git?
-- What is ***"git cherry-pick"***?
+  - [Undo the most recent local commits in Git?](https://stackoverflow.com/questions/927358/how-do-i-undo-the-most-recent-local-commits-in-git)
+
+- What is `git cherry-pick`?
+  - [Git Cherry Pick](https://www.atlassian.com/git/tutorials/cherry-pick)
+
 - What is the difference between ***HEAD***, ***working tree*** and ***index***, in Git?
+
 - Explain the ***Gitflow*** workflow?
-- What is ***"git stash"***? And when to use it?
+  - [Gitflow Workflow](https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow)
+
+- What is `git stash`? And when to use it?
+
 - How to remove a file from git without removing it from the file system?
-- When to use ***"git rebase"*** instead of ***"git merge"***?
+
+- How do you *find a list of files* that has changed in a particular commit?
+
+- What is `git bisect`? How can you use it to determine the source of a (regression) bug?
+  - [`git bisect`](https://git-scm.com/docs/git-bisect)
+
+- When to use `git rebase` instead of `git merge`? What does the ***interactive rebasing*** do?
+  - [When do you use `git rebase` instead of `git merge`?](https://stackoverflow.com/questions/804115/when-do-you-use-git-rebase-instead-of-git-merge)
+  - [Merging vs. Rebasing](https://www.atlassian.com/git/tutorials/merging-vs-rebasing)
+
+- What are the different ways we can use to refer to a commit?
+
+***Resources***:
+
+- [11 Painful Git Interview Questions](https://www.codementor.io/@alexershov/11-painful-git-interview-questions-and-answers-you-will-cry-on-lybbrqhvs)
+- [Essential Git Interview Questions](https://www.toptal.com/git/interview-questions)
+- [Advanced Git Tutorials](https://www.atlassian.com/git/tutorials/advanced-overview)
 
 **[[⬆]](#toc) return to Table of Contents**
 
