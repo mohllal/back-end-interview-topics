@@ -6,20 +6,20 @@ Feel free to contribute, it would be highly appreciated!
 
 ## <a name="toc">Table of Contents</a>
 
-- [Programming Languages](#languages)
-  - [JavaScript](#javascript)
-- [Node.js](#nodejs)
-- [Object Oriented Programming (OOP)](#oop)
-- [Networking](#networking)
-- [Architectures and Design Patterns](#architecture):
-  - [Microservices](#microservices)
-- [SQL](#sql)
-- [Docker](#docker)
-- [Security](#security)
-- [Git](#git)
-- [Testing](#testing)
-- [Data Structures and Algorithms](#dataStructure-algorithm)
-- [Scrum](#scrum)
+- [Back-End Interview Topics](#back-end-interview-topics)
+  - [Table of Contents](#table-of-contents)
+    - [Programming Languages](#programming-languages)
+    - [Node.js](#nodejs)
+    - [Object Oriented Programming (OOP)](#object-oriented-programming-oop)
+    - [Networking](#networking)
+    - [Architectures and Design Patterns](#architectures-and-design-patterns)
+    - [SQL](#sql)
+    - [Docker](#docker)
+    - [Security](#security)
+    - [Git](#git)
+    - [Testing](#testing)
+    - [Data Structures and Algorithms](#data-structures-and-algorithms)
+    - [Scrum](#scrum)
 
 ### <a name="languages">Programming Languages</a>
 
@@ -28,22 +28,50 @@ Feel free to contribute, it would be highly appreciated!
   - What are the *programming paradigms* supported by JavaScript?
   
   - What is the difference between ***classical inheritance*** and ***prototypal inheritance***?
+    - [What’s the Difference Between Class & Prototypal Inheritance?](https://medium.com/javascript-scene/master-the-javascript-interview-what-s-the-difference-between-class-prototypal-inheritance-e4cd0a7562e9)
   
   - What is ***asynchronous programming***, and why is it important in JavaScript?
   
-  - What is the difference between between ***global scope***, and ***local scope*** (function scope, and block scope)?
+  - What is ***callback hell*** and how can it be avoided? What is the point of Promises?
+    - [What is a Promise?](https://medium.com/javascript-scene/master-the-javascript-interview-what-is-a-promise-27fc71e77261)
   
+  - What is the difference between between ***global scope***, and ***local scope*** (function scope, and block scope)?
+    - [Scope: Local, Global and Lexical](https://medium.com/altcampus/scope-local-global-and-lexical-e164f53450b3)
+    - [Scopes in Javascript](https://towardsdatascience.com/still-confused-in-js-scopes-f7dae62c16ee)
+
   - What is ***hoisting***, and ***IIFE***?
+    - [Understanding Hoisting in JavaScript](https://scotch.io/tutorials/understanding-hoisting-in-javascript)
+    - [JavaScript Execution Context and Hoisting](https://towardsdatascience.com/javascript-execution-context-and-hoisting-c2cc4993e37d?)
   
   - What is ***closures***? How to emulate ***encapsulating*** using it?
+    - [What is a Closure?](https://medium.com/javascript-scene/master-the-javascript-interview-what-is-a-closure-b2f0d2152b36)
   
   - What are the different *patterns of function invocation* in JavaScript? And what is the value of `this` in each one them?
+    - [JavaScript: Function Invocation Patterns](http://doctrina.org/Javascript-Function-Invocation-Patterns.html)
   
   - What is the different between `.__proto__` and `.prototype`?
+    - [JavaScript inheritance behind the scene](https://hackernoon.com/understand-nodejs-javascript-object-inheritance-proto-prototype-class-9bd951700b29)
+    - [What is the difference between `prototype` and `__proto__` in JavaScript?](https://medium.com/javascript-in-plain-english/proto-vs-prototype-in-js-140b9b9c8cd5)
   
   - How to change the context of functions using `.call()`, `.apply()`, or `.bind()`?
+    - [How-to: call() , apply() and bind() in JavaScript](https://www.codementor.io/@niladrisekhardutta/how-to-call-apply-and-bind-in-javascript-8i1jca6jp)
+  
+  - What do `Object.assign()` and `Object.create()` do?
+  
+  - What do `Promise.race()` and `Promise.all()` do?
   
   - What happens when we call a function with the `new` keyword?
+    - [`new` operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/new)
+
+  - What is the output of this code:
+
+    ```javascript
+    for (var i = 0; i < 3; i++) {
+        setTimeout(function() { console.log(i); }, 1000 + i);
+    }
+    ```
+
+    What will be printed on the console if we change `var i` with `let i`?
   
   - Consider the following code:
 
@@ -54,7 +82,7 @@ Feel free to contribute, it would be highly appreciated!
     console.log(b);
     ```
 
-    What will be printed on the console? If the *strict mode* was enabled using `'use strict';`, what will be the output?
+    What will be printed on the console? If the *strict mode* was enabled by using the `'use strict';`, what will be the output?
   
   - Define a `repeatify` function on the String object. The function accepts an integer that specifies how many times the string has to be repeated. The function returns the string repeated the number of times specified. For example:
 
@@ -97,6 +125,12 @@ Feel free to contribute, it would be highly appreciated!
     new obj1.print();
     ```
 
+  ***Resources***:
+  - [5 Typical JavaScript Interview Exercises](https://www.sitepoint.com/5-typical-javascript-interview-exercises/)
+  - [JavaScript: Object Prototypes](http://doctrina.org/Javascript-Objects-Prototypes.html)
+  - [Tricky JavaScript Interview Questions](https://dmitripavlutin.com/simple-but-tricky-javascript-interview-questions/)
+  - [Floating Point Math](https://0.30000000000000004.com/)
+
 **[[⬆]](#toc) return to Table of Contents**
 
 ### <a name="nodejs">Node.js</a>
@@ -104,8 +138,6 @@ Feel free to contribute, it would be highly appreciated!
 - Is everything that’s asynchronous in Node.js handled by the `libuv`'s Thread Pool?
 
 - What are the ***phases of the Event Loop***?
-
-- What is ***callback hell*** and how can it be avoided?
 
 - What are the ***Timers*** functions of Node.js?
 
@@ -128,12 +160,19 @@ Feel free to contribute, it would be highly appreciated!
   ```
 
 - What is ***Globals*** in Node.js? (explain *global*, *process*, and *buffer*)
+
 - What is the use of ***Underscore (`_`)*** in Node.js?
+
 - What are ***Error First Callbacks*** in Node.js?
+
 - How to ***gracefully shutdown/kill*** Node.js process? (explain `process.kill()`)
+
 - What is the difference between `readFile()` vs `createReadStream()`?
+
 - What is the `EventEmitter` in Node.js?
+
 - How many types of ***Streams*** are present in Node.js?
+
 - How to solve ***Process out of Memory Exception*** in Node.js ?
 
 **[[⬆]](#toc) return to Table of Contents**
