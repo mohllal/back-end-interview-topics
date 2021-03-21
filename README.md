@@ -10,13 +10,21 @@ Feel free to contribute, it would be highly appreciated!
   - [JavaScript](#javascript)
 - [Node.js](#nodejs)
 - [Object Oriented Programming](#object-oriented-programming)
-- [Networking](#networking)
-- [Architectures and Design Patterns](#architectures-and-design-patterns)
+- [Software Architectures](#software-architectures)
   - [Microservices Architecture](#microservices-architecture)
+- [Software Design Patterns](#software-design-patterns)
+- [Application Security](#application-security)
 - [Databases](#databases)
   - [MySQL](#mysql)
-- [Docker](#docker)
-- [Security](#security)
+  - [MongoDB](#mongodb)
+  - [Redis](#redis)
+  - [Kafka](#kafka)
+- [Networking](#networking)
+- [Infrastructure](#infrastructure)
+  - [Docker](#docker)
+  - [Nginx](#nginx)
+  - [Kubernetes](#kubernetes)
+- [CI/CD](#cicd)
 - [Git](#git)
 - [Testing](#testing)
 - [Data Structures and Algorithms](#data-structures-and-algorithms)
@@ -265,56 +273,7 @@ Feel free to contribute, it would be highly appreciated!
 
 **[[⬆]](#table-of-contents) return to TOC**
 
-### Networking
-
-- What does the term **network topology** refer to? What are the different types of network topology? What are the pros and cons of each one?
-  - Star Topology
-  - Bus Topology
-  - Ring Topology
-  - Tree Topology
-  - Mesh Topology
-  - Hybrid Topology
-- What are the layers of the **OSI model**? *(A brief description for each layer)*
-  1. Physical Layer
-  2. Data Link Layer
-  3. Network Layer
-  4. Transport Layer
-  5. Session Layer
-  6. Presentation Layer
-  7. Application Layer
-- What are the layers of the **TCP/IP model**? *(A brief description for each layer)*
-  1. Physical Layer
-  2. Data Link Layer
-  3. Internet Layer
-  4. Transport Layer
-  5. Application Layer
-- What are the differences between **IPv4** and **IPv6**?
-- What are the differences between **TCP** and **UDP**?
-- What are **DNS**, **DHCP**, and **NAT**?
-- What is the difference between **DNAT (Destination Network Address Translation)** and **SNAT (Source Network Address Translation)** ?
-- How does **tracert** or **traceroute** tool work?
-- How do ***content delivery networks (CDNs)** work?
-- What are the differences between **reverse proxies** and **forward proxies**?
-- What does the term **AAA** mean in network security?
-- What is **DoS/DDoS** attack? How can protect servers from it?
-- The age-old question: **What happens when you type google.com into your browser and press enter?**
-
-***Resources***:
-
-- [What Is Network Topology?](https://www.dnsstuff.com/what-is-network-topology)
-- [TCP/IP vs OSI Model: What's the Difference?](https://www.guru99.com/difference-tcp-ip-vs-osi-model.html)
-- [IPv4 vs IPv6: What’s the Difference?](https://www.guru99.com/difference-ipv4-vs-ipv6.html)
-- [TCP vs UDP: What's the Difference?](https://www.guru99.com/tcp-vs-udp-understanding-the-difference.html)
-- [SNAT vs DNAT](https://ipwithease.com/snat-vs-dnat/)
-- [How content delivery networks (CDNs) work](https://humanwhocodes.com/blog/2011/11/29/how-content-delivery-networks-cdns-work/)
-- [What is Reverse Proxy Server](https://www.imperva.com/learn/performance/reverse-proxy/)
-- [AAA](https://en.wikipedia.org/wiki/AAA_(computer_security))
-- [What is a DDoS Attack?](https://www.cloudflare.com/learning/ddos/what-is-a-ddos-attack/)
-- [What happens when you type google.com into your browser and press enter?](https://github.com/alex/what-happens-when)
-
-**[[⬆]](#table-of-contents) return to TOC**
-
-### Architectures and Design Patterns
+### Software Architectures
 
 #### Microservices Architecture
   
@@ -331,6 +290,19 @@ Feel free to contribute, it would be highly appreciated!
 - What do you understand by ***Contract Testing***?
 - What is ***End to End Testing*** in Microservices?
 - What are ***Reactive Extensions*** in Microservices?
+
+**[[⬆]](#table-of-contents) return to TOC**
+
+### Software Design Patterns
+
+**[[⬆]](#table-of-contents) return to TOC**
+
+### Application Security
+
+- What is ***JSON*** Web Token? And when to use it?
+- What is the JSON Web Token *structure*? And How does it work?
+- What is ***OAuth 2.0***? What are its roles?
+- What are the five grants for acquiring an access token in ***OAuth 2.0***?
 
 **[[⬆]](#table-of-contents) return to TOC**
 
@@ -396,7 +368,70 @@ Feel free to contribute, it would be highly appreciated!
 
 **[[⬆]](#table-of-contents) return to TOC**
 
-### Docker
+#### MongoDB
+
+**[[⬆]](#table-of-contents) return to TOC**
+
+#### Redis
+
+**[[⬆]](#table-of-contents) return to TOC**
+
+#### Kafka
+
+**[[⬆]](#table-of-contents) return to TOC**
+
+### Networking
+
+- What does the term **network topology** refer to? What are the different types of network topology? What are the pros and cons of each one?
+  - Star Topology
+  - Bus Topology
+  - Ring Topology
+  - Tree Topology
+  - Mesh Topology
+  - Hybrid Topology
+- What are the layers of the **OSI model**? *(A brief description for each layer)*
+  1. Physical Layer
+  2. Data Link Layer
+  3. Network Layer
+  4. Transport Layer
+  5. Session Layer
+  6. Presentation Layer
+  7. Application Layer
+- What are the layers of the **TCP/IP model**? *(A brief description for each layer)*
+  1. Physical Layer
+  2. Data Link Layer
+  3. Internet Layer
+  4. Transport Layer
+  5. Application Layer
+- What are the differences between **IPv4** and **IPv6**?
+- What are the differences between **TCP** and **UDP**?
+- What are **DNS**, **DHCP**, and **NAT**?
+- What is the difference between **DNAT (Destination Network Address Translation)** and **SNAT (Source Network Address Translation)** ?
+- How does **tracert** or **traceroute** tool work?
+- How do ***content delivery networks (CDNs)** work?
+- What are the differences between **reverse proxies** and **forward proxies**?
+- What does the term **AAA** mean in network security?
+- What is **DoS/DDoS** attack? How can protect servers from it?
+- The age-old question: **What happens when you type google.com into your browser and press enter?**
+
+***Resources***:
+
+- [What Is Network Topology?](https://www.dnsstuff.com/what-is-network-topology)
+- [TCP/IP vs OSI Model: What's the Difference?](https://www.guru99.com/difference-tcp-ip-vs-osi-model.html)
+- [IPv4 vs IPv6: What’s the Difference?](https://www.guru99.com/difference-ipv4-vs-ipv6.html)
+- [TCP vs UDP: What's the Difference?](https://www.guru99.com/tcp-vs-udp-understanding-the-difference.html)
+- [SNAT vs DNAT](https://ipwithease.com/snat-vs-dnat/)
+- [How content delivery networks (CDNs) work](https://humanwhocodes.com/blog/2011/11/29/how-content-delivery-networks-cdns-work/)
+- [What is Reverse Proxy Server](https://www.imperva.com/learn/performance/reverse-proxy/)
+- [AAA](https://en.wikipedia.org/wiki/AAA_(computer_security))
+- [What is a DDoS Attack?](https://www.cloudflare.com/learning/ddos/what-is-a-ddos-attack/)
+- [What happens when you type google.com into your browser and press enter?](https://github.com/alex/what-happens-when)
+
+**[[⬆]](#table-of-contents) return to TOC**
+
+### Infrastructure
+
+#### Docker
 
 - What is the difference between ***Docker*** and ***VM*** (Virtual Machine)?
 - What is Docker?
@@ -423,12 +458,15 @@ Feel free to contribute, it would be highly appreciated!
 
 **[[⬆]](#table-of-contents) return to TOC**
 
-### Security
+#### Nginx
 
-- What is ***JSON*** Web Token? And when to use it?
-- What is the JSON Web Token *structure*? And How does it work?
-- What is ***OAuth 2.0***? What are its roles?
-- What are the five grants for acquiring an access token in ***OAuth 2.0***?
+**[[⬆]](#table-of-contents) return to TOC**
+
+#### Kubernetes
+
+**[[⬆]](#table-of-contents) return to TOC**
+
+### CI/CD
 
 **[[⬆]](#table-of-contents) return to TOC**
 
