@@ -4,138 +4,138 @@ This repository contains a list of Back-End interview topics that I had to revie
 
 Feel free to contribute, it would be highly appreciated!
 
-## <a name="toc">Table of Contents</a>
+## Table of Contents
 
-- [Back-End Interview Topics](#back-end-interview-topics)
-  - [Table of Contents](#table-of-contents)
-    - [Programming Languages](#programming-languages)
-      - [JavaScript](#javascript)
-    - [Node.js](#nodejs)
-    - [Object Oriented Programming (OOP)](#object-oriented-programming-oop)
-    - [Networking](#networking)
-    - [Architectures and Design Patterns](#architecture)
-      - [Microservices Architecture](#microservices)
-    - [SQL](#sql)
-    - [Docker](#docker)
-    - [Security](#security)
-    - [Git](#git)
-    - [Testing](#testing)
-    - [Data Structures and Algorithms](#data-structures-and-algorithms)
-    - [Scrum](#scrum)
+- [Programming Languages](#programming-languages)
+  - [JavaScript](#javascript)
+- [Node.js](#nodejs)
+- [Object Oriented Programming](#object-oriented-programming)
+- [Networking](#networking)
+- [Architectures and Design Patterns](#architectures-and-design-patterns)
+  - [Microservices Architecture](#microservices-architecture)
+- [Databases](#databases)
+  - [MySQL](#mysql)
+- [Docker](#docker)
+- [Security](#security)
+- [Git](#git)
+- [Testing](#testing)
+- [Data Structures and Algorithms](#data-structures-and-algorithms)
+- [Agile](#agile)
 
-### <a name="programming-languages">Programming Languages</a>
+### Programming Languages
 
-- <a name="javascript">JavaScript</a>:
-  
-  - What are the *programming paradigms* supported by JavaScript?
-  
-  - What is the difference between ***classical inheritance*** and ***prototypal inheritance***?
-    - [What’s the Difference Between Class & Prototypal Inheritance?](https://medium.com/javascript-scene/master-the-javascript-interview-what-s-the-difference-between-class-prototypal-inheritance-e4cd0a7562e9)
-  
-  - What is ***asynchronous programming***, and why is it important in JavaScript?
-  
-  - What is ***callback hell*** and how can it be avoided? What is the point of Promises?
-    - [What is a Promise?](https://medium.com/javascript-scene/master-the-javascript-interview-what-is-a-promise-27fc71e77261)
-  
-  - What is the difference between between ***global scope***, and ***local scope*** (function scope, and block scope)?
-    - [Scope: Local, Global and Lexical](https://medium.com/altcampus/scope-local-global-and-lexical-e164f53450b3)
-    - [Scopes in JavaScript](https://towardsdatascience.com/still-confused-in-js-scopes-f7dae62c16ee)
+#### JavaScript
 
-  - What is ***hoisting***, and ***IIFE***?
-    - [Understanding Hoisting in JavaScript](https://scotch.io/tutorials/understanding-hoisting-in-javascript)
-    - [JavaScript Execution Context and Hoisting](https://towardsdatascience.com/javascript-execution-context-and-hoisting-c2cc4993e37d?)
-  
-  - What is ***closures***? How to emulate ***encapsulating*** using it?
-    - [What is a Closure?](https://medium.com/javascript-scene/master-the-javascript-interview-what-is-a-closure-b2f0d2152b36)
-  
-  - What are the different *patterns of function invocation* in JavaScript? And what is the value of `this` in each one them?
-    - [JavaScript: Function Invocation Patterns](http://doctrina.org/Javascript-Function-Invocation-Patterns.html)
-  
-  - What is the different between `.__proto__` and `.prototype`?
-    - [JavaScript inheritance behind the scene](https://hackernoon.com/understand-nodejs-javascript-object-inheritance-proto-prototype-class-9bd951700b29)
-    - [What is the difference between `prototype` and `__proto__` in JavaScript?](https://medium.com/javascript-in-plain-english/proto-vs-prototype-in-js-140b9b9c8cd5)
-  
-  - How to change the context of functions using `.call()`, `.apply()`, or `.bind()`?
-    - [How-to: `call()` , `apply()` and `bind()` in JavaScript](https://www.codementor.io/@niladrisekhardutta/how-to-call-apply-and-bind-in-javascript-8i1jca6jp)
-  
-  - What do `Object.assign()` and `Object.create()` do?
-  
-  - What do `Promise.race()` and `Promise.all()` do?
-  
-  - What happens when we call a function with the `new` keyword?
-    - [`new` operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/new)
+- What are the *programming paradigms* supported by JavaScript?
 
-  - What is the output of this code:
+- What is the difference between ***classical inheritance*** and ***prototypal inheritance***?
+  - [What’s the Difference Between Class & Prototypal Inheritance?](https://medium.com/javascript-scene/master-the-javascript-interview-what-s-the-difference-between-class-prototypal-inheritance-e4cd0a7562e9)
 
-    ```javascript
-    for (var i = 0; i < 3; i++) {
-        setTimeout(function() { console.log(i); }, 1000 + i);
-    }
-    ```
+- What is ***asynchronous programming***, and why is it important in JavaScript?
 
-    What will be printed on the console if we change `var i` with `let i`?
-  
-  - Consider the following code:
+- What is ***callback hell*** and how can it be avoided? What is the point of Promises?
+  - [What is a Promise?](https://medium.com/javascript-scene/master-the-javascript-interview-what-is-a-promise-27fc71e77261)
 
-    ```javascript
-    (function() {
-        var a = b = 5;
-    })();
-    console.log(b);
-    ```
+- What is the difference between between ***global scope***, and ***local scope*** (function scope, and block scope)?
+  - [Scope: Local, Global and Lexical](https://medium.com/altcampus/scope-local-global-and-lexical-e164f53450b3)
+  - [Scopes in JavaScript](https://towardsdatascience.com/still-confused-in-js-scopes-f7dae62c16ee)
 
-    What will be printed on the console? If the *strict mode* was enabled by using the `'use strict';`, what will be the output?
-  
-  - Define a `repeatify` function on the String object. The function accepts an integer that specifies how many times the string has to be repeated. The function returns the string repeated the number of times specified. For example:
+- What is ***hoisting***, and ***IIFE***?
+  - [Understanding Hoisting in JavaScript](https://scotch.io/tutorials/understanding-hoisting-in-javascript)
+  - [JavaScript Execution Context and Hoisting](https://towardsdatascience.com/javascript-execution-context-and-hoisting-c2cc4993e37d?)
 
-    ```javascript
-    console.log('hello'.repeatify(3));
-    ```
+- What is ***closures***? How to emulate ***encapsulating*** using it?
+  - [What is a Closure?](https://medium.com/javascript-scene/master-the-javascript-interview-what-is-a-closure-b2f0d2152b36)
 
-    It should print hellohellohello.
-  
-  - What is the result of the following code snippets?
+- What are the different *patterns of function invocation* in JavaScript? And what is the value of `this` in each one them?
+  - [JavaScript: Function Invocation Patterns](http://doctrina.org/Javascript-Function-Invocation-Patterns.html)
 
-    ```javascript
-    var fullname = 'John Doe';
-    var obj = {
-        fullname: 'Colin Ihrig',
-        prop: {
-            fullname: 'Aurelio De Rosa',
-            getFullname: function() {
-                return this.fullname;
-            }
-        }
-    };
-    console.log(obj.prop.getFullname());
+- What is the different between `.__proto__` and `.prototype`?
+  - [JavaScript inheritance behind the scene](https://hackernoon.com/understand-nodejs-javascript-object-inheritance-proto-prototype-class-9bd951700b29)
+  - [What is the difference between `prototype` and `__proto__` in JavaScript?](https://medium.com/javascript-in-plain-english/proto-vs-prototype-in-js-140b9b9c8cd5)
 
-    var test = obj.prop.getFullname;
-    console.log(test());
-    ```
+- How to change the context of functions using `.call()`, `.apply()`, or `.bind()`?
+  - [How-to: `call()` , `apply()` and `bind()` in JavaScript](https://www.codementor.io/@niladrisekhardutta/how-to-call-apply-and-bind-in-javascript-8i1jca6jp)
 
-    ```javascript
-    const obj1 = {
-        value: 'hi',
-        print: function() {
-            console.log(this);
-        },
-    };
+- What do `Object.assign()` and `Object.create()` do?
 
-    const obj2 = { value: 17 };
+- What do `Promise.race()` and `Promise.all()` do?
 
-    obj1.print.call(obj2);
-    new obj1.print();
-    ```
+- What happens when we call a function with the `new` keyword?
+  - [`new` operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/new)
 
-  ***Resources***:
-  - [5 Typical JavaScript Interview Exercises](https://www.sitepoint.com/5-typical-javascript-interview-exercises/)
-  - [JavaScript: Object Prototypes](http://doctrina.org/Javascript-Objects-Prototypes.html)
-  - [Tricky JavaScript Interview Questions](https://dmitripavlutin.com/simple-but-tricky-javascript-interview-questions/)
-  - [Floating Point Math](https://0.30000000000000004.com/)
+- What is the output of this code:
 
-**[[⬆]](#toc) return to Table of Contents**
+  ```javascript
+  for (var i = 0; i < 3; i++) {
+      setTimeout(function() { console.log(i); }, 1000 + i);
+  }
+  ```
 
-### <a name="nodejs">Node.js</a>
+  What will be printed on the console if we change `var i` with `let i`?
+
+- Consider the following code:
+
+  ```javascript
+  (function() {
+      var a = b = 5;
+  })();
+  console.log(b);
+  ```
+
+  What will be printed on the console? If the *strict mode* was enabled by using the `'use strict';`, what will be the output?
+
+- Define a `repeatify` function on the String object. The function accepts an integer that specifies how many times the string has to be repeated. The function returns the string repeated the number of times specified. For example:
+
+  ```javascript
+  console.log('hello'.repeatify(3));
+  ```
+
+  It should print `hellohellohello`.
+
+- What is the result of the following code snippets?
+
+  ```javascript
+  var fullname = 'John Doe';
+  var obj = {
+      fullname: 'Colin Ihrig',
+      prop: {
+          fullname: 'Aurelio De Rosa',
+          getFullname: function() {
+              return this.fullname;
+          }
+      }
+  };
+  console.log(obj.prop.getFullname());
+
+  var test = obj.prop.getFullname;
+  console.log(test());
+  ```
+
+  ```javascript
+  const obj1 = {
+      value: 'hi',
+      print: function() {
+          console.log(this);
+      },
+  };
+
+  const obj2 = { value: 17 };
+
+  obj1.print.call(obj2);
+  new obj1.print();
+  ```
+
+***Resources***:
+
+- [5 Typical JavaScript Interview Exercises](https://www.sitepoint.com/5-typical-javascript-interview-exercises/)
+- [JavaScript: Object Prototypes](http://doctrina.org/Javascript-Objects-Prototypes.html)
+- [Tricky JavaScript Interview Questions](https://dmitripavlutin.com/simple-but-tricky-javascript-interview-questions/)
+- [Floating Point Math](https://0.30000000000000004.com/)
+
+**[[⬆]](#table-of-contents) return to TOC**
+
+### Node.js
 
 - Is everything that’s asynchronous in Node.js handled by the `libuv`'s Worker Pool?
   - [Don't Block the Event Loop (or the Worker Pool)](https://nodejs.org/en/docs/guides/dont-block-the-event-loop/)
@@ -243,9 +243,9 @@ Feel free to contribute, it would be highly appreciated!
 - [Node.js Interview Questions and Answers](https://blog.risingstack.com/node-js-interview-questions-and-answers-2017/)
 - [Express and Node JS Interview Questions](https://www.onlineinterviewquestions.com/node-js-interview-questions/)
 
-**[[⬆]](#toc) return to Table of Contents**
+**[[⬆]](#table-of-contents) return to TOC**
 
-### <a name="languages">Object Oriented Programming (OOP)</a>
+### Object Oriented Programming
 
 - What are the pros and cons of ***functional programming*** vs ***object-oriented programming***?
 - What are the four ***pillars of OOP***? *(A brief description for each one)*
@@ -263,9 +263,9 @@ Feel free to contribute, it would be highly appreciated!
 - What is LSP (***Liskov Substitution Principle***) and what are some examples of its use?
 - What is the difference between ***association***, ***aggregation*** and ***composition***?
 
-**[[⬆]](#toc) return to Table of Contents**
+**[[⬆]](#table-of-contents) return to TOC**
 
-### <a name="networking">Networking</a>
+### Networking
 
 - What does the term ***network topology*** refer to? Describe the star topology and its cons?
 - What are the layers of the ***OSI*** reference model? *(A brief description for each layer)*
@@ -279,29 +279,31 @@ Feel free to contribute, it would be highly appreciated!
 - What does the term ***AAA*** mean in network security?
 - What is ***DoS/DDoS***? How can protect servers from it?
 
-**[[⬆]](#toc) return to Table of Contents**
+**[[⬆]](#table-of-contents) return to TOC**
 
-### <a name="architecture">Architectures and Design Patterns</a>
+### Architectures and Design Patterns
 
-- <a name="microservices">Microservices Architecture</a>:
+#### Microservices Architecture
   
-  - What is the ***Microservices*** architecture? And what are its pros and cons?
-  - What are the differences between ***Monolithic***, ***SOA*** and ***Microservices***?
-  - What is the ***API Gateway*** pattern?
-  - What are the ***decomposition patterns*** used in Microservices? (briefly describe decomposition by ***business capability***, decomposition by ***subdomain***, and ***self-contained*** services)
-  - What are the ***deployment strategies*** used in Microservices?
-  - What are the *challenges* faced while working with Microservices?
-  - What is ***Domain Driven Design (DDD)***?
-  - What is ***Ubiquitous Language (UL)*** and what is its uses in DDD?
-  - What is the ***Distributed Transaction*** pattern?
-  - What is the ***Bounded Context*** pattern?
-  - What do you understand by ***Contract Testing***?
-  - What is ***End to End Testing*** in Microservices?
-  - What are ***Reactive Extensions*** in Microservices?
+- What is the ***Microservices*** architecture? And what are its pros and cons?
+- What are the differences between ***Monolithic***, ***SOA*** and ***Microservices***?
+- What is the ***API Gateway*** pattern?
+- What are the ***decomposition patterns*** used in Microservices? (briefly describe decomposition by ***business capability***, decomposition by ***subdomain***, and ***self-contained*** services)
+- What are the ***deployment strategies*** used in Microservices?
+- What are the *challenges* faced while working with Microservices?
+- What is ***Domain Driven Design (DDD)***?
+- What is ***Ubiquitous Language (UL)*** and what is its uses in DDD?
+- What is the ***Distributed Transaction*** pattern?
+- What is the ***Bounded Context*** pattern?
+- What do you understand by ***Contract Testing***?
+- What is ***End to End Testing*** in Microservices?
+- What are ***Reactive Extensions*** in Microservices?
 
-**[[⬆]](#toc) return to Table of Contents**
+**[[⬆]](#table-of-contents) return to TOC**
 
-### <a name="sql">SQL</a>
+### Databases
+
+#### MySQL
 
 - Suppose we have two tables `tbl1` and `tbl2`; Each of these tables contains one column on which join condition has been defined. The table `tbl1` contains the column `col1` and the table `tbl2` contains the column `col2`.
   
@@ -359,9 +361,9 @@ Feel free to contribute, it would be highly appreciated!
 
 - Describe and give an example of the ***cross join***?
 
-**[[⬆]](#toc) return to Table of Contents**
+**[[⬆]](#table-of-contents) return to TOC**
 
-### <a name="docker">Docker</a>
+### Docker
 
 - What is the difference between ***Docker*** and ***VM*** (Virtual Machine)?
 - What is Docker?
@@ -386,18 +388,18 @@ Feel free to contribute, it would be highly appreciated!
 - What is the use of the `docker save` and `docker load` commands?
 - Is there any problem with just using the `latest` tag in a container orchestration environment? What is considered best practice for ***image tagging***?
 
-**[[⬆]](#toc) return to Table of Contents**
+**[[⬆]](#table-of-contents) return to TOC**
 
-### <a name="security">Security</a>
+### Security
 
 - What is ***JSON*** Web Token? And when to use it?
 - What is the JSON Web Token *structure*? And How does it work?
 - What is ***OAuth 2.0***? What are its roles?
 - What are the five grants for acquiring an access token in ***OAuth 2.0***?
 
-**[[⬆]](#toc) return to Table of Contents**
+**[[⬆]](#table-of-contents) return to TOC**
 
-### <a name="git">Git</a>
+### Git
 
 - What is Git? And what it is used for?
 
@@ -442,9 +444,9 @@ Feel free to contribute, it would be highly appreciated!
 - [Essential Git Interview Questions](https://www.toptal.com/git/interview-questions)
 - [Advanced Git Tutorials](https://www.atlassian.com/git/tutorials/advanced-overview)
 
-**[[⬆]](#toc) return to Table of Contents**
+**[[⬆]](#table-of-contents) return to TOC**
 
-### <a name="testing">Testing</a>
+### Testing
 
 - What is ***Test Driven Development*** (TDD)? And what is its process?
 
@@ -477,9 +479,9 @@ Feel free to contribute, it would be highly appreciated!
 - [Code Coverage: The Metric That Makes Your Tests Worse](https://medium.com/@AikoPath/code-coverage-the-metric-that-makes-your-tests-worse-c1dddcc0831)
 - [5 Questions Every Unit Test Must Answer](https://medium.com/javascript-scene/what-every-unit-test-needs-f6cd34d9836d)
 
-**[[⬆]](#toc) return to Table of Contents**
+**[[⬆]](#table-of-contents) return to TOC**
 
-### <a name="dataStructure-algorithm">Data Structures and Algorithms</a>
+### Data Structures and Algorithms
 
 - What is the difference between ***static array*** and ***dynamic array***?
 - Compare the *time complexity* and *space complexity* of *searching*, *insertion*, and *deletion* for the following data structures:
@@ -501,9 +503,9 @@ Feel free to contribute, it would be highly appreciated!
 - What is the difference between ***inorder***, ***preorder***, and ***postorder*** tree traversal algorithms?
 - What is the difference between ***breadth-first-search (BFS)*** and ***depth-first-search (DFS)***?
 
-**[[⬆]](#toc) return to Table of Contents**
+**[[⬆]](#table-of-contents) return to TOC**
 
-### <a name="scrum">Scrum</a>
+### Agile
 
 - What is the *Agile Software Development* standing for? And why we should use it!
 - What is the difference between the ***Agile*** and ***Waterfall*** software development models?
@@ -520,4 +522,4 @@ Feel free to contribute, it would be highly appreciated!
 - What are the *main roles* in the Scrum?
 - What are the ***Sprint Planning*** meeting, ***Stand-up*** meeting, ***Definition of Done (DoD)*** meeting, and ***Sprint Retrospective*** meeting?
 
-**[[⬆]](#toc) return to Table of Contents**
+**[[⬆]](#table-of-contents) return to TOC**
