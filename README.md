@@ -318,7 +318,11 @@ Resources
 - Suppose we have two tables `tbl1` and `tbl2`; Each of these tables contains one column on which join condition has been defined. The table `tbl1` contains the column `col1` and the table `tbl2` contains the column `col2`.
   
   - What will the outcome of the following **inner** join query?
-  
+    - Join columns having **unique** values.
+    - Join columns having **duplicate** values.
+    - **One** Join table contains Null value.
+    - **Both** tables containing Null values.
+
   ```SQL
   SELECT a.col1, b.col2
   FROM tbl1 a INNER JOIN tbl2 b
@@ -326,7 +330,11 @@ Resources
   ```
   
   - What will the outcome of the following **left outer** join query?
-  
+    - Join columns having **unique** values.
+    - Join columns having **duplicate** values.
+    - **One** Join table contains Null value.
+    - **Both** tables containing Null values.
+
   ```SQL
   SELECT a.col1, b.col2
   FROM tbl1 a LEFT OUTER JOIN tbl2 b
@@ -334,7 +342,11 @@ Resources
   ```
   
   - What will the outcome of the following **right outer** join query?
-  
+    - Join columns having **unique** values.
+    - Join columns having **duplicate** values.
+    - **One** Join table contains Null value.
+    - **Both** tables containing Null values.
+
   ```SQL
   SELECT a.col1, b.col2
   FROM tbl1 a RIGHT OUTER JOIN tbl2 b
@@ -342,18 +354,16 @@ Resources
   ```
   
   - What will the outcome of the following **full outer** join query?
-  
+    - Join columns having **unique** values.
+    - Join columns having **duplicate** values.
+    - **One** Join table contains Null value.
+    - **Both** tables containing Null values.
+
   ```SQL
   SELECT a.col1, b.col2
   FROM tbl1 a FULL OUTER JOIN tbl2 b
   ON a.col1 = b.col2
   ```
-
-    In case of:
-        - Join columns having **unique** values.
-        - Join columns having **duplicate** values.
-        - *One* Join table contains **Null** value.
-        - *Both* tables containing **Null** values.
 
 - Consider the following `staffs` table:
   
