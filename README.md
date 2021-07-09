@@ -8,12 +8,13 @@ Feel free to contribute, it would be highly appreciated!
 
 - [Programming Languages](#programming-languages)
   - [JavaScript](#javascript)
-- [Node.js](#nodejs)
+- [Frameworks](#frameworks)
+  - [Node.js](#nodejs)
 - [Object Oriented Programming](#object-oriented-programming)
-- [Software Architectures](#software-architectures)
-  - [Microservices Architecture](#microservices-architecture)
-- [Software Design Patterns](#software-design-patterns)
-- [Application Security](#application-security)
+- [Architectures](#architectures)
+  - [Microservices](#microservices)
+- [Design Patterns](#design-patterns)
+- [Security](#security)
 - [Databases](#databases)
   - [MySQL](#mysql)
   - [MongoDB](#mongodb)
@@ -24,7 +25,7 @@ Feel free to contribute, it would be highly appreciated!
   - [Docker](#docker)
   - [Nginx](#nginx)
   - [Kubernetes](#kubernetes)
-- [CI/CD](#cicd)
+- [Deployment](#deployment)
 - [Git](#git)
 - [Testing](#testing)
 - [Data Structures and Algorithms](#data-structures-and-algorithms)
@@ -66,8 +67,10 @@ Feel free to contribute, it would be highly appreciated!
   - [How-to: `call()` , `apply()` and `bind()` in JavaScript](https://www.codementor.io/@niladrisekhardutta/how-to-call-apply-and-bind-in-javascript-8i1jca6jp)
 
 - What do `Object.assign()` and `Object.create()` do?
+  - [Object.create() and Object.assign()?](https://stackoverflow.com/questions/34838294/what-is-difference-between-creating-object-using-object-create-and-object-assi)
 
 - What do `Promise.race()` and `Promise.all()` do?
+  - [The Difference Between Promise.all and Promise.race in JavaScript](https://alligator.io/js/promise-all-promise-race/)
 
 - What happens when we call a function with the `new` keyword?
   - [`new` operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/new)
@@ -134,7 +137,7 @@ Feel free to contribute, it would be highly appreciated!
   new obj1.print();
   ```
 
-**Resources**:
+Resources
 
 - [5 Typical JavaScript Interview Exercises](https://www.sitepoint.com/5-typical-javascript-interview-exercises/)
 - [JavaScript: Object Prototypes](http://doctrina.org/Javascript-Objects-Prototypes.html)
@@ -143,7 +146,9 @@ Feel free to contribute, it would be highly appreciated!
 
 **[[⬆]](#table-of-contents) return to TOC**
 
-### Node.js
+### Frameworks
+
+#### Node.js
 
 - Is everything that’s asynchronous in Node.js handled by the `libuv`'s Worker Pool?
   - [Don't Block the Event Loop (or the Worker Pool)](https://nodejs.org/en/docs/guides/dont-block-the-event-loop/)
@@ -242,7 +247,7 @@ Feel free to contribute, it would be highly appreciated!
   }
   ```
 
-**Resources**:
+Resources
 
 - [7 Hardest Node.js Interview Questions](https://dev.to/fullstackcafe/7-hardest-nodejs-interview-questions--answers-3lje)
 - [Top 20 Interview Questions on Node.js](https://www.codingdefined.com/2017/04/top-20-interview-questions-on-nodejs.html)
@@ -273,9 +278,9 @@ Feel free to contribute, it would be highly appreciated!
 
 **[[⬆]](#table-of-contents) return to TOC**
 
-### Software Architectures
+### Architectures
 
-#### Microservices Architecture
+#### Microservices
   
 - What is the **Microservices** architecture? And what are its pros and cons?
 - What are the differences between **Monolithic**, **SOA** and **Microservices**?
@@ -293,11 +298,11 @@ Feel free to contribute, it would be highly appreciated!
 
 **[[⬆]](#table-of-contents) return to TOC**
 
-### Software Design Patterns
+### Design Patterns
 
 **[[⬆]](#table-of-contents) return to TOC**
 
-### Application Security
+### Security
 
 - What is **JSON** Web Token? And when to use it?
 - What is the JSON Web Token *structure*? And How does it work?
@@ -414,7 +419,7 @@ Feel free to contribute, it would be highly appreciated!
 - What is **DoS/DDoS** attack? How can protect servers from it?
 - The age-old question: **What happens when you type google.com into your browser and press enter?**
 
-**Resources**:
+Resources
 
 - [What Is Network Topology?](https://www.dnsstuff.com/what-is-network-topology)
 - [TCP/IP vs OSI Model: What's the Difference?](https://www.guru99.com/difference-tcp-ip-vs-osi-model.html)
@@ -436,6 +441,7 @@ Feel free to contribute, it would be highly appreciated!
 - What is **Docker**? What is the difference between **Docker** and **VM** (Virtual Machine)?
 - What is the advantage of **Docker** over **Hypervisors**? (briefly describe What is the main difference between the approaches of *Docker* and *standard hypervisor* virtualization?)
 - What is Docker **Image** and **Container**?
+- How do Docker containers make use of kernel cgroups and namespaces?
 - What is the default Docker **network driver**, and how can we change it when running a Docker image?
 - What are the *four* different **restart policies** in Docker?
 - What is **Docker Compose**? What can it be used for?
@@ -455,7 +461,7 @@ Feel free to contribute, it would be highly appreciated!
 - What is the use of the `docker save` and `docker load` commands?
 - Is there any problem with just using the `latest` tag in a container orchestration environment? What is considered best practice for **image tagging**?
 
-**Resources**:
+Resources
 
 - [What is Docker?](https://docs.docker.com/get-started/overview/)
 - [How is Docker different from a virtual machine?](https://stackoverflow.com/questions/16047306/how-is-docker-different-from-a-virtual-machine)
@@ -471,14 +477,33 @@ Feel free to contribute, it would be highly appreciated!
 - [Best practices for writing Dockerfiles](https://docs.docker.com/develop/develop-images/dockerfile_best-practices/)
 - [Do I lose my data when the container exits?](https://docs.docker.com/engine/faq/#do-i-lose-my-data-when-the-container-exits)
 - [Why do docker compose services take 10 seconds to recreate or stop?](https://docs.docker.com/compose/faq/#why-do-my-services-take-10-seconds-to-recreate-or-stop)
+- [Trapping signals in Docker containers](https://medium.com/@gchudnov/trapping-signals-in-docker-containers-7a57fdda7d86)
 - [Docker ADD vs VOLUME](https://stackoverflow.com/questions/27735706/docker-add-vs-volume)
 - [What are the possible states for a docker container?](https://stackoverflow.com/questions/32427684/what-are-the-possible-states-for-a-docker-container)
 - [Lifecycle of Docker Container](https://medium.com/@BeNitinAgarwal/lifecycle-of-docker-container-d2da9f85959)
 - [Recommendations for tagging and versioning container images](https://docs.microsoft.com/en-us/azure/container-registry/container-registry-image-tag-version)
+- [Understanding the Docker Internals](https://medium.com/@BeNitinAgarwal/understanding-the-docker-internals-7ccb052ce9fe)
+- [Cgroups, namespaces, and beyond: what are containers made from?](https://www.youtube.com/watch?v=sK5i-N34im8&ab_channel=Docker)
+- [PaaS under the hood, episode 1: kernel namespaces](https://web.archive.org/web/20150326185901/http://blog.dotcloud.com/under-the-hood-linux-kernels-on-dotcloud-part)
 
 **[[⬆]](#table-of-contents) return to TOC**
 
 #### Nginx
+
+- What is nginx?
+- What is C10K problem?
+- Explain how Nginx can handle multiple connections within a single process?
+- Does Nginx support compress the request to the upstream?
+
+Resources
+
+- [What is NGINX?](https://www.nginx.com/resources/glossary/nginx/)
+- [C10k problem](https://en.wikipedia.org/wiki/C10k_problem)
+- [Inside NGINX: How We Designed for Performance & Scale](https://www.nginx.com/blog/inside-nginx-how-we-designed-for-performance-scale/)
+- [Tuning NGINX for Performance](https://www.nginx.com/blog/tuning-nginx/)
+- [The Architecture of Open Source Applications: nginx](https://aosabook.org/en/nginx.html)
+- [ngx_http_gunzip_module](https://nginx.org/en/docs/http/ngx_http_gunzip_module.html)
+- [Nginx Interview Questions](https://www.courseya.com/nginx-interview-questions/)
 
 **[[⬆]](#table-of-contents) return to TOC**
 
@@ -486,7 +511,20 @@ Feel free to contribute, it would be highly appreciated!
 
 **[[⬆]](#table-of-contents) return to TOC**
 
-### CI/CD
+### Deployment
+
+- What are the differences between continuous integration, continuous delivery, and continuous deployment?
+- What is the difference between a Blue/Green deployment and a rolling deployment?
+- What is the Canary deployment strategy?
+- Explain how DevSecOps impacts on the CD pipeline?
+- What is pipeline as code?
+
+Resources
+
+- [Continuous integration vs. continuous delivery vs. continuous deployment](https://www.atlassian.com/continuous-delivery/principles/continuous-integration-vs-delivery-vs-deployment)
+- [Deployment Strategies Defined](http://blog.itaysk.com/2017/11/20/deployment-strategies-defined)
+- [DevSecOps: Injecting Security into CD Pipelines](https://www.atlassian.com/continuous-delivery/principles/devsecops)
+- [What is pipeline as code?](https://about.gitlab.com/topics/ci-cd/pipeline-as-code/)
 
 **[[⬆]](#table-of-contents) return to TOC**
 
@@ -527,7 +565,7 @@ Feel free to contribute, it would be highly appreciated!
 
 - What are the different ways we can use to refer to a commit?
 
-**Resources**:
+Resources
 
 - [11 Painful Git Interview Questions](https://www.codementor.io/@alexershov/11-painful-git-interview-questions-and-answers-you-will-cry-on-lybbrqhvs)
 - [Essential Git Interview Questions](https://www.toptal.com/git/interview-questions)
@@ -561,7 +599,7 @@ Feel free to contribute, it would be highly appreciated!
 - How is *Unit Testing* different from *Integration Testing*?
   - [Difference between Unit Testing and Integration Testing?](https://www.softwaretestingclass.com/what-is-difference-between-unit-testing-and-integration-testing/)
 
-**Resources**:
+Resources
 
 - [Unit Testing Interview Questions and Answers](https://www.janbasktraining.com/blog/unit-testing-interview-questions/)
 - [The 100% Code Coverage Myth](https://hackernoon.com/the-100-code-coverage-myth-900b83d20d3d)
