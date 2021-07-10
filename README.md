@@ -422,12 +422,21 @@ Resources
 - What are the differences between **TCP** and **UDP**?
 - What are **DNS**, **DHCP**, and **NAT**?
 - What is the difference between **DNAT (Destination Network Address Translation)** and **SNAT (Source Network Address Translation)** ?
+- What is a virtual private cloud (VPC)?
 - How does **tracert** or **traceroute** tool work?
 - How do **content delivery networks (CDNs)** work?
 - What are the differences between **reverse proxies** and **forward proxies**?
+- How does **failover** work for Application Load Balancer?
 - What does the term **AAA** mean in network security?
 - What is **DoS/DDoS** attack? How can protect servers from it?
+- What is a TLS handshake?
+- How does HTTPS work?
+- What is the difference between HTTP/1.1 and HTTP/2?
+- How does HTTP/2 Server Push work?
 - The age-old question: **What happens when you type google.com into your browser and press enter?**
+- What is the SPDY protocol?
+- What is the QUIC protocol and how does it work?
+- What is the difference between Polling, SSE, and WebSocket?
 
 Resources
 
@@ -436,11 +445,25 @@ Resources
 - [IPv4 vs IPv6: What’s the Difference?](https://www.guru99.com/difference-ipv4-vs-ipv6.html)
 - [TCP vs UDP: What's the Difference?](https://www.guru99.com/tcp-vs-udp-understanding-the-difference.html)
 - [SNAT vs DNAT](https://ipwithease.com/snat-vs-dnat/)
+- [What is a virtual private cloud (VPC)?](https://www.cloudflare.com/learning/cloud/what-is-a-virtual-private-cloud/)
 - [How content delivery networks (CDNs) work](https://humanwhocodes.com/blog/2011/11/29/how-content-delivery-networks-cdns-work/)
 - [What is Reverse Proxy Server](https://www.imperva.com/learn/performance/reverse-proxy/)
 - [AAA](https://en.wikipedia.org/wiki/AAA_(computer_security))
 - [What is a DDoS Attack?](https://www.cloudflare.com/learning/ddos/what-is-a-ddos-attack/)
 - [What happens when you type google.com into your browser and press enter?](https://github.com/alex/what-happens-when)
+- [How does failover work for Application Load Balancer?](https://learn.akamai.com/en-us/webhelp/application-load-balancer/application-load-balancer-guide/GUID-5B8C92AE-23C6-494E-8895-85C8BDB0BAF8.html)
+- [What is a TLS handshake?](https://www.cloudflare.com/learning/ssl/what-happens-in-a-tls-handshake/)
+- [What is HTTPS?](https://www.cloudflare.com/learning/ssl/what-is-https/)
+- [How does SSL/TLS work?](https://security.stackexchange.com/questions/20803/how-does-ssl-tls-work)
+- [SSL Handshake explained](https://medium.com/@kasunpdh/ssl-handshake-explained-4dabb87cdce)
+- [HTTP/1.1 vs HTTP/2: What's the Difference?](https://www.digitalocean.com/community/tutorials/http-1-1-vs-http-2-what-s-the-difference)
+- [HTTP/2 vs. HTTP/1.1: How do they affect web performance?](https://www.cloudflare.com/learning/performance/http2-vs-http1.1/)
+- [A Comprehensive Guide To HTTP/2 Server Push  ](https://www.smashingmagazine.com/2017/04/guide-http2-server-push/)
+- [What is SPDY?](https://blog.stackpath.com/spdy/)
+- [SPDY: An experimental protocol for a faster web](https://www.chromium.org/spdy/spdy-whitepaper)
+- [What is a QUIC flood DDoS attack?](https://www.cloudflare.com/learning/ddos/what-is-a-quic-flood/)
+- [Polling vs SSE vs WebSocket — How to choose the right one](https://codeburst.io/polling-vs-sse-vs-websocket-how-to-choose-the-right-one-1859e4e13bd9)
+- [Long Polling vs WebSockets vs Server-Sent Events](https://medium.com/system-design-blog/long-polling-vs-websockets-vs-server-sent-events-c43ba96df7c1)
 
 **[[⬆]](#table-of-contents) return to TOC**
 
