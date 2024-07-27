@@ -11,8 +11,8 @@ Feel free to contribute, it would be highly appreciated!
 - [Frameworks](#frameworks)
   - [Node.js](#nodejs)
 - [Object Oriented Programming](#object-oriented-programming)
-- [Architectures](#architectures)
-  - [Microservices](#microservices)
+- [Microservices](#microservices)
+- [Domain Driven Design](#domain-driven-design)
 - [Design Patterns](#design-patterns)
 - [Security](#security)
 - [Databases](#databases)
@@ -29,7 +29,6 @@ Feel free to contribute, it would be highly appreciated!
 - [Git](#git)
 - [Testing](#testing)
 - [Data Structures and Algorithms](#data-structures-and-algorithms)
-- [Agile](#agile)
 
 ### Programming Languages
 
@@ -276,11 +275,18 @@ Resources
 - What is LSP (**Liskov Substitution Principle**) and what are some examples of its use?
 - What is the difference between **association**, **aggregation** and **composition**?
 
+Resources
+
+- [Object Oriented Programming - The Four Pillars of OOP](https://www.youtube.com/watch?v=1ONhXmQuWP8&ab_channel=KeepOnCoding)
+- [SOLID Principles: Do You Really Understand Them?](https://www.youtube.com/watch?v=kF7rQmSRlq0&ab_channel=AlexHyett)
+- [SOLID: The First 5 Principles of Object Oriented Design](https://www.digitalocean.com/community/conceptual-articles/s-o-l-i-d-the-first-five-principles-of-object-oriented-design)
+- [Association, aggregation, and composition in OOPs](https://medium.com/@bindubc/association-aggregation-and-composition-in-oops-8d260854a446)
+- [Difference Between Cohesion and Coupling](https://stackoverflow.com/questions/3085285/difference-between-cohesion-and-coupling)
+- [Prototypal inheritance](https://javascript.info/prototype-inheritance)
+
 **[[⬆]](#table-of-contents) return to TOC**
 
-### Architectures
-
-#### Microservices
+### Microservices
   
 - What is the **Microservices** architecture? And what are its pros and cons?
 - What are the differences between **Monolithic**, **SOA** and **Microservices**?
@@ -288,8 +294,6 @@ Resources
 - What are the **decomposition patterns** used in Microservices? (briefly describe decomposition by **business capability**, decomposition by **subdomain**, and **self-contained** services)
 - What are the **deployment strategies** used in Microservices?
 - What are the *challenges* faced while working with Microservices?
-- What is **Domain Driven Design (DDD)**?
-- What is **Ubiquitous Language (UL)** and what is its uses in DDD?
 - What is the **Distributed Transaction** pattern?
 - What is the **Bounded Context** pattern?
 - What do you understand by **Contract Testing**?
@@ -298,7 +302,259 @@ Resources
 
 **[[⬆]](#table-of-contents) return to TOC**
 
+### Domain Driven Design
+  
+- What is **Domain Driven Design (DDD)**?
+- What is **Ubiquitous Language (UL)** and what is its uses in DDD?
+
+**[[⬆]](#table-of-contents) return to TOC**
+
 ### Design Patterns
+
+- What are the three types of design patterns? (describe briefly creational, structural, and behavioral patterns)
+- What is the **Strategy pattern**? How to use it to simplify the selection of algorithms/implementations at runtime?
+
+```typescript
+interface PaymentStrategy {
+    processPayment(): void;
+}
+
+class CreditCardPayment implements PaymentStrategy {
+    public processPayment(): void {
+        console.log("Processing credit card payment...");
+    }
+}
+
+class PayPalPayment implements PaymentStrategy {
+    public processPayment(): void {
+        console.log("Processing PayPal payment...");
+    }
+}
+
+class PaymentProcessor {
+    private strategy: PaymentStrategy;
+
+    public setPaymentStrategy(strategy: PaymentStrategy): void {
+        this.strategy = strategy;
+    }
+
+    public process(): void {
+        this.strategy.processPayment();
+    }
+}
+
+// Usage
+const processor = new PaymentProcessor();
+processor.setPaymentStrategy(new CreditCardPayment());
+processor.process(); // Output: Processing credit card payment...
+processor.setPaymentStrategy(new PayPalPayment());
+processor.process(); // Output: Processing PayPal payment...
+```
+
+- What is the **Singleton pattern**? When should we use it?
+
+```typescript
+class ConfigurationManager {
+    private static instance: ConfigurationManager;
+
+    private constructor() {
+        // private constructor to prevent instantiation
+    }
+
+    public static getInstance(): ConfigurationManager {
+        if (!ConfigurationManager.instance) {
+            ConfigurationManager.instance = new ConfigurationManager();
+        }
+        return ConfigurationManager.instance;
+    }
+
+    public loadSettings(): void {
+        // load settings
+    }
+}
+
+// Usage
+const config = ConfigurationManager.getInstance();
+config.loadSettings();
+```
+
+- What is the **Decorator pattern**? How to use it to extend objects dynamically while avoiding classes explosion?
+
+```typescript
+interface Coffee {
+    cost(): number;
+}
+
+class ClassicCoffee implements Coffee {
+    cost(): number {
+        return 5.0;
+    }
+}
+
+abstract class CoffeeDecorator implements Coffee {
+    protected decoratedCoffee: Coffee;
+
+    constructor(coffee: Coffee) {
+        this.decoratedCoffee = coffee;
+    }
+
+    cost(): number {
+        return this.decoratedCoffee.cost();
+    }
+}
+
+class MilkDecorator extends CoffeeDecorator {
+    constructor(coffee: Coffee) {
+        super(coffee);
+    }
+
+    cost(): number {
+        return super.cost() + 1.5;
+    }
+}
+
+class SugarDecorator extends CoffeeDecorator {
+    constructor(coffee: Coffee) {
+        super(coffee);
+    }
+
+    cost(): number {
+        return super.cost() + 0.5;
+    }
+}
+
+// Usage
+let coffee: Coffee = new ClassicCoffee();
+let milkCoffee = new MilkDecorator(coffee);
+let sugarCoffee = new SugarDecorator(coffee);
+console.log("Milk coffee cost: " + milkCoffee.cost()); // Output: Cost: 6.5
+console.log("Sugar coffee cost: " + sugarCoffee.cost()); // Output: Cost: 5.5
+```
+
+- What is the **Observer pattern**? When should we use it in event-driven programming?
+
+```typescript
+interface IPublisher {
+    registerSubscriber(s: ISubscriber): void;
+    removeSubscriber(s: ISubscriber): void;
+    notifySubscribers(): void;
+}
+
+interface ISubscriber {
+    update(temperature: number, humidity: number, pressure: number): void;
+}
+
+class WeatherData implements IPublisher {
+    private subscribers: ISubscriber[] = [];
+    private temperature: number;
+    private humidity: number;
+    private pressure: number;
+
+    public registerSubscriber(s: ISubscriber): void {
+        this.subscribers.push(s);
+    }
+
+    public removeSubscriber(s: ISubscriber): void {
+        this.subscribers = this.subscribers.filter(subscriber => subscriber !== s);
+    }
+
+    public notifySubscribers(): void {
+        for (const subscriber of this.subscribers) {
+            subscriber.update(this.temperature, this.humidity, this.pressure);
+        }
+    }
+
+    public setMeasurements(temperature: number, humidity: number, pressure: number): void {
+        this.temperature = temperature;
+        this.humidity = humidity;
+        this.pressure = pressure;
+        this.notifySubscribers();
+    }
+}
+
+class CurrentConditionsDisplay implements ISubscriber {
+    public update(temperature: number, humidity: number, pressure: number): void {
+        console.log(`Current conditions: ${temperature}F degrees and ${humidity}% humidity`);
+    }
+}
+
+// Usage
+const weatherData = new WeatherData();
+const currentDisplay = new CurrentConditionsDisplay();
+weatherData.registerSubscriber(currentDisplay);
+weatherData.setMeasurements(80, 65, 30.4); // Output: Current conditions: 80.0F degrees and 65.0% humidity
+```
+
+- What is the **Facade pattern**? How to use it to simplify and hide the implementation complexity of sub-systems?
+
+```typescript
+class DVDPlayer {
+    on(): void {
+        console.log("DVD Player on");
+    }
+
+    play(): void {
+        console.log("DVD Player playing");
+    }
+}
+
+class Projector {
+    on(): void {
+        console.log("Projector on");
+    }
+
+    wideScreenMode(): void {
+        console.log("Projector in widescreen mode");
+    }
+}
+
+class SoundSystem {
+    on(): void {
+        console.log("Sound System on");
+    }
+
+    setVolume(level: number): void {
+        console.log("Sound System volume set to " + level);
+    }
+}
+
+class HomeTheaterFacade {
+    private dvdPlayer: DVDPlayer;
+    private projector: Projector;
+    private soundSystem: SoundSystem;
+
+    constructor(dvd: DVDPlayer, proj: Projector, sound: SoundSystem) {
+        this.dvdPlayer = dvd;
+        this.projector = proj;
+        this.soundSystem = sound;
+    }
+
+    watchMovie(): void {
+        this.dvdPlayer.on();
+        this.dvdPlayer.play();
+        this.projector.on();
+        this.projector.wideScreenMode();
+        this.soundSystem.on();
+        this.soundSystem.setVolume(10);
+        console.log("Movie started!");
+    }
+}
+
+// Usage
+const dvd = new DVDPlayer();
+const proj = new Projector();
+const sound = new SoundSystem();
+const homeTheater = new HomeTheaterFacade(dvd, proj, sound);
+homeTheater.watchMovie(); // Output: various system on and playing messages followed by "Movie started!"
+```
+
+Resources
+
+- [5 Design Patterns That Are ACTUALLY Used By Developers](https://www.youtube.com/watch?v=YMAwgRwjEOQ&ab_channel=AlexHyett)
+- [Singleton Pattern](https://refactoring.guru/design-patterns/singleton)
+- [Decorator Pattern](https://refactoring.guru/design-patterns/decorator)
+- [Facade Pattern](https://refactoring.guru/design-patterns/facade)
+- [Observer Pattern](https://refactoring.guru/design-patterns/observer)
 
 **[[⬆]](#table-of-contents) return to TOC**
 
@@ -458,7 +714,7 @@ Resources
 - [SSL Handshake explained](https://medium.com/@kasunpdh/ssl-handshake-explained-4dabb87cdce)
 - [HTTP/1.1 vs HTTP/2: What's the Difference?](https://www.digitalocean.com/community/tutorials/http-1-1-vs-http-2-what-s-the-difference)
 - [HTTP/2 vs. HTTP/1.1: How do they affect web performance?](https://www.cloudflare.com/learning/performance/http2-vs-http1.1/)
-- [A Comprehensive Guide To HTTP/2 Server Push  ](https://www.smashingmagazine.com/2017/04/guide-http2-server-push/)
+- [A Comprehensive Guide To HTTP/2 Server Push](https://www.smashingmagazine.com/2017/04/guide-http2-server-push/)
 - [What is SPDY?](https://blog.stackpath.com/spdy/)
 - [SPDY: An experimental protocol for a faster web](https://www.chromium.org/spdy/spdy-whitepaper)
 - [What is a QUIC flood DDoS attack?](https://www.cloudflare.com/learning/ddos/what-is-a-quic-flood/)
@@ -610,10 +866,6 @@ Resources
 
 - What is **Test Driven Development** (TDD)? And what is its process?
 
-- What is **Data-Driven Development** (DDD)? And what is its process?
-
-- What is **Keyword Driven Development** (KDD)? And what is its process?
-
 - What is **Behavior Driven Development** (BDD)? And what is its process?
 
 - What is the difference between **Fake**, **Mock**, and **Stub**?
@@ -623,8 +875,6 @@ Resources
 - What are the various *types of Unit Testing*?
   - [State vs Interaction Based Testing](http://www.natpryce.com/articles/000342.html)
 
-- What do you know about **Mike Cohn’s Test Pyramid**?
-  
 - What is **Code Coverage**? And what are its various techniques?
   - [What is code coverage?](https://stackoverflow.com/questions/195008/what-is-code-coverage-and-how-do-you-measure-it)
   - [Pitfalls of code coverage](https://stackoverflow.com/questions/695811/pitfalls-of-code-coverage/695888)
@@ -664,24 +914,5 @@ Resources
   - **Counting Sort**
 - What is the difference between **inorder**, **preorder**, and **postorder** tree traversal algorithms?
 - What is the difference between **breadth-first-search (BFS)** and **depth-first-search (DFS)**?
-
-**[[⬆]](#table-of-contents) return to TOC**
-
-### Agile
-
-- What is the *Agile Software Development* standing for? And why we should use it!
-- What is the difference between the **Agile** and **Waterfall** software development models?
-- What is the *four main principles* of the Agile Software Development? (**Agile Manifesto**)
-- How does *Agile* work?
-- List some Agile software development (or system development) **methodologies**?
-- What is the difference between **Kanban** and **Scrum** *Agile* frameworks?
-- What is the duration of a *Scrum sprint*?
-- What is the **Scrum of Scrums**?
-- What is the term **increment** standing for, in Scrum context?
-- Explain the **scrum poker**/**planning poker** technique?
-- What is the **Release candidate**?
-- What is a **story point** in the Scrum?
-- What are the *main roles* in the Scrum?
-- What are the **Sprint Planning** meeting, **Stand-up** meeting, **Definition of Done (DoD)** meeting, and **Sprint Retrospective** meeting?
 
 **[[⬆]](#table-of-contents) return to TOC**
